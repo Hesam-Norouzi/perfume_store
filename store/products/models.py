@@ -20,7 +20,7 @@ class Brand(TimestampModel):
     """
     name = models.CharField(max_length=255, unique=True)
     logo = models.CharField(max_length=255, null=True, blank=True)
-    country = models.CharField(max_length=100, null=True, blank=True)
+    country = models.CharField(max_length=100, choices=Country.choices(), null=True, blank=True)
     website = models.URLField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
